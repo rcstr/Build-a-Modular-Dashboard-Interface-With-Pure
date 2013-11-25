@@ -1,0 +1,182 @@
+@import "compass";
+@import "pure/pure";
+
+// variables
+$color-red: #E73F3F;
+$color-orange: #F76C27;
+$color-yellow: #E7E737;
+$color-blue: #6D9DD1;
+$color-purple: #7E45D3;
+
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+// Module pure menu
+.pure-menu {
+  font-weight: lighter;
+
+  &.pure-menu-fixed {
+    position: fixed;
+  }
+
+  &.pure-menu-blckbg {
+    background: #222;
+
+    & .pure-menu-heading:hover {
+      color:#fff;
+    }
+
+    & .pure-menu-selected a {
+      background:$color-purple;
+
+      &:hover {
+        color:#efefef;
+      }
+    }
+
+    a {
+      color: #fff;
+
+      &:hover {
+        background: #666;
+      }
+    }
+  }
+}
+
+// module dashboard piece
+$module-dp:dashboard-piece;
+.#{$module-dp} {
+  min-height: 300px;
+  @include box-sizing(border-box);
+  color:#fff;
+  text-align: center;
+  position: relative;
+  paddin-top:40px;
+
+  h1 {
+    line-height:300px;
+    font-size: 3.6em;
+    margin: 0;
+  }
+}
+
+.#{$module-dp}-logo {
+  h1 {
+    line-height:100px;
+  }
+  svg {
+    margin-top:80px;
+  }
+}
+
+.#{$module-dp}-redbg {
+  background:$color-red;
+}
+
+.#{$module-dp}-orangegb {
+  background: $color-orange;
+}
+
+.#{$module-dp}-yellowbg {
+  background-color: $color-yellow;
+}
+
+.#{$module-dp}-bluebg {
+  background-color:$color-blue;
+}
+
+.dashboard-piece-purplebg {
+  background-color: $color-purple ;
+}
+
+.dashboard-piece-graybg {
+  background-color: #798388;
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 999;
+
+  p {
+    font-weight: lighter;
+  }
+
+  .light {
+    opacity: 0.4;
+    display: block;
+  }
+
+  h2 i {
+    font-size:2em;
+    opacity: 0.4;
+  }
+}
+
+.dashboard-metric {
+  text-transform: uppercase;
+  font-size: 1.6em;
+  line-height: 1;
+
+  i {
+    margin-right: 0.6em;
+  }
+}
+
+// module bar
+.bar-horizontal {
+  height:35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.bar-horizontal-bar {
+  background-color: #fff;
+  height: 36px;
+  line-height: 36px;
+  color:#444;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bar-vertical {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+// extend module pure table
+.pure-table-center {
+  margin:0 auto;
+}
+
+.pure-table-dark {
+  color:#ddd;
+
+  & .pure-table-odd {
+    color:#444;
+  }
+}
+
+// module weather
+.weather {
+  padding-top:60px;
+}
+
+footer {
+  background:rgb(20, 20, 20);
+  color:#aaa;
+  padding:10px;
+  font-size: 0.6em;
+  font-weight: bold;
+}
